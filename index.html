@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rishendra Myaka · Expo &amp; Supabase developer</title>
+  <meta name="description" content="I fix and launch Expo and Supabase apps for agencies: upgrades, failing builds, store rejections, row-level security and payments.">
+  <meta property="og:title" content="Rishendra Myaka · Expo & Supabase developer">
+  <meta property="og:description" content="Overflow help for agencies: Expo upgrades, builds, store submissions, Supabase security and payments.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3ERM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <div class="wrap nav">
+      <a class="brand" href="#">Rishendra Myaka</a>
+      <nav aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#how">How I work</a>
+        <a class="cta-small" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap">
+      <p class="eyebrow">Expo &amp; Supabase developer · India, working with US &amp; UK agencies</p>
+      <h1>I fix and launch apps for agencies.</h1>
+      <p class="lead">
+        When a React Native project is stuck (an Expo upgrade that won't build, a store rejection,
+        a Supabase database that isn't locked down, payments that need finishing) I take it over,
+        fix it, and hand it back working, under your brand.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="#contact">Send me a task</a>
+        <a class="button" href="#work">See my work</a>
+      </div>
+      <p class="note">My evening overlaps US and UK working hours, so you get replies the same day.</p>
+    </section>
+
+    <section id="services" class="band">
+      <div class="wrap">
+        <h2>What I can take off your plate</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Fix and launch AI-built apps</h3>
+            <p>Apps started with AI tools or a template that stalled at 80%: sign-in, data, payments, bugs, release.</p>
+          </article>
+          <article class="card">
+            <h3>Expo upgrades and builds</h3>
+            <p>SDK upgrades, failing EAS builds, OTA updates with EAS Update, Android target-API deadlines.</p>
+          </article>
+          <article class="card">
+            <h3>Store submissions</h3>
+            <p>Google Play and App Store review: data-safety forms, background-location declarations, account deletion, privacy pages.</p>
+          </article>
+          <article class="card">
+            <h3>Supabase security review</h3>
+            <p>Row-level security, grants, SECURITY DEFINER functions and storage, checked and fixed with migrations and tests.</p>
+          </article>
+          <article class="card">
+            <h3>Payments and webhooks</h3>
+            <p>Server-side checkout, signed and idempotent webhooks, deposits and holds that expire, done in Edge Functions.</p>
+          </article>
+          <article class="card">
+            <h3>Push notifications</h3>
+            <p>Expo push with FCM and APNs, sent once per event, plus scheduled reminders.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="wrap">
+      <h2>Work</h2>
+      <p class="sub">Public projects with code, tests and write-ups. Data in the demos is sample data.</p>
+
+      <article class="project">
+        <div class="shots">
+          <img src="img/book-a-slot-slots.jpg" width="233" height="510" alt="Book a Slot: choosing a time slot" loading="lazy">
+          <img src="img/book-a-slot-dashboard.jpg" width="233" height="380" alt="Book a Slot: owner dashboard with live bookings" loading="lazy">
+        </div>
+        <div class="text">
+          <h3>Book a Slot</h3>
+          <p class="tags">Expo SDK 58 · Supabase · Edge Functions · Razorpay · Push · GitHub Actions</p>
+          <p>A booking app for small businesses. Customers book slots in the business's time zone and pay a deposit; owners see bookings arrive live.</p>
+          <ul>
+            <li>Booking rules enforced in Postgres: an exclusion constraint makes double booking impossible, even under load.</li>
+            <li>Row-level security on every table, checked by <strong>30 automated attack-style tests</strong> using only the public key.</li>
+            <li>Payments through a server-created checkout and an HMAC-verified, idempotent webhook, tested end to end.</li>
+            <li>Unpaid holds expire after 15 minutes; reminders run on a schedule; in-app account deletion.</li>
+          </ul>
+          <p class="links">
+            <a href="https://github.com/rishendra-myaka/expo-supabase-booking">Code and case study</a>
+            <a href="https://rishendra-myaka.github.io/expo-supabase-booking/">Live web demo</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="shots">
+          <img src="img/rls-check-report.jpg" width="400" height="460" alt="RLS Check report listing security findings by severity" loading="lazy">
+        </div>
+        <div class="text">
+          <h3>RLS Check</h3>
+          <p class="tags">TypeScript · Postgres · Supabase · Vite · CLI</p>
+          <p>A free tool that reviews a Supabase project's security and explains each problem in plain English, with the SQL to fix it. It runs in the browser and never sees your data.</p>
+          <ul>
+            <li>Catches tables with RLS off, always-true write policies, policies that trust <code>user_metadata</code>, views that skip RLS and unsafe SECURITY DEFINER functions.</li>
+            <li>Command-line mode for CI: fail a pipeline when a migration opens a table by mistake.</li>
+            <li>Used on Book a Slot, where it found and fixed excess table privileges.</li>
+          </ul>
+          <p class="links">
+            <a href="https://rishendra-myaka.github.io/supabase-rls-check/">Try RLS Check</a>
+            <a href="https://github.com/rishendra-myaka/supabase-rls-check">Code</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project soon">
+        <div class="text">
+          <h3>Expo upgrade case study <span class="badge">In progress</span></h3>
+          <p>Taking an older open-source Expo app to SDK 58, with every breaking change and fix written up.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="how" class="band">
+      <div class="wrap">
+        <h2>How working together works</h2>
+        <ol class="steps">
+          <li><strong>Send the task.</strong> A repo invite or a description is enough. I reply with questions, an estimate and a delivery date.</li>
+          <li><strong>Start small.</strong> Happy to begin with a short paid test task so you can judge the work before anything bigger.</li>
+          <li><strong>White-label by default.</strong> Your brand, your repo, your client. NDAs are fine, and I follow your rules on tools.</li>
+          <li><strong>Clear hand-over.</strong> A pull request with a plain-English summary, tests where they make sense, and notes for your team.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap contact">
+      <h2>Have something stuck?</h2>
+      <p>Tell me what is broken or what needs shipping. I usually reply within a day.</p>
+      <p><a class="button primary" href="mailto:rishendra.myaka.dev@gmail.com?subject=Project%20help">rishendra.myaka.dev@gmail.com</a></p>
+      <p class="note"><a href="https://github.com/rishendra-myaka">GitHub: rishendra-myaka</a></p>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    © 2026 Rishendra Myaka · Hyderabad, India
+  </footer>
+</body>
+</html>
